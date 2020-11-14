@@ -3,7 +3,7 @@
 <!-- Dice Pool Bar-->
 <!-- Note:  The dice bar that can be added to the top of your character sheets to provide the dice pool rolling functionality.-->
 
-<div class='sheet-dice'>
+<div class='sheet-dice-bar'>
 	<table>
 		<tr>
 			<td style="text-align:center">
@@ -32,8 +32,9 @@
 				</button>
 			</td>
 			<td style="min-width: 60;">
-				<button  type="roll" style="font-size: 20px; text-align: center; width: 30px; height: 30px;" value="/roll [[0+@{d4}]]d4 + [[0+@{d6}]]d6 + [[0+@{d8}]]d8 + [[0+@{d10}]]d10 + [[0+@{d12}]]d12"> </button>
-
+				<button	type="roll" 
+					style="font-size: 20px; text-align: center; width: 30px; height: 30px;" 
+					value="/roll [[0+@{d4}]]d4 + [[0+@{d6}]]d6 + [[0+@{d8}]]d8 + [[0+@{d10}]]d10 + [[0+@{d12}]]d12"> </button>
 			</td>
 		</tr>
 		<tr>
@@ -53,11 +54,21 @@
 				<input type="number" name="attr_d12" id="attr_d12" min="0" max="99" />
 			</td>
 			<td>
-				<button type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --d4|'' --d6|'' --d8|'' --d10|'' --d12|''" style="height:30px;">CLEAR</button>
+				<button	type="roll" 
+					class="blank-roll-button" 
+					value="!setattr --silent --name @{character_name} --d4|'' --d6|'' --d8|'' --d10|'' --d12|''" style="
+					height:30px;">
+				CLEAR
+				</button>
 			</td>
 		</tr>
 	</table>
 </div><!-- Dice Bar close --> 
-
 <!--End of Dice Pool Bar>
+
+<div class='sheet-prime-core'>
+
+
+</div><!-- Sheet close --> 
+
 <!-- ********************************************************************************************************************* -->
