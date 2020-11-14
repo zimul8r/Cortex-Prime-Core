@@ -1,0 +1,88 @@
+
+<!-- ********************************************************************************************************************* -->
+<!-- Dice Pool Bar-->
+<!-- Note:  The dice bar that can be added to the top of your character sheets to provide the dice pool rolling functionality.-->
+
+<div class='sheet-dice'>
+	<table>
+		<tr>
+			<td style="text-align:center">
+				<button name="roll_d4"  type="roll" value="/roll d4" width="30" height="30" margin="3">	
+					<img src="https://cdn.pixabay.com/photo/2012/05/07/03/41/triangle-47852_960_720.png" width="30" height="30"/>	
+				</button>
+			</td>
+			<td style="text-align:center">
+				<button name="roll_d6"  type="roll" value="/roll d6" width="30" height="30">
+					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/37/die-308887__340.png" width="30" height="30"/>
+				</button>
+			</td>
+			<td style="text-align:center">
+				<button name="roll_d8"  type="roll" value="/roll d8" width="30" height="30">
+					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024223__340.png" width="30" height="30"/>
+				</button>
+			</td>
+			<td style="text-align:center">
+				<button name="roll_d10"  type="roll" value="/roll d10" width="30" height="30">		  
+					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/36/dice-308824__340.png" width="30" height="30"/>
+				</button>
+			</td>
+			<td style="text-align:center">
+				<button name="roll_d12"  type="roll" value="/roll d12" width="30" height="30">
+					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024222__340.png" width="30" height="30"/>
+				</button>
+			</td>
+			<td style="text-align:center">
+				<button name="roll_d20"  type="roll" value="/roll d20" width="30" height="30">	
+					<img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Purple_d20.png" width="30" height="30"/>
+				</button>
+			</td>
+			<td style="text-align:center">
+				<button name="roll_d100"  type="roll" value="/roll d100" width="30" height="30">
+					<img src="https://cdn.pixabay.com/photo/2017/09/05/15/54/percent-2718209_1280.png" width="30" height="30"/>
+				</button>
+			</td>
+			<td style="text-align:center">
+				<button name="roll_dF" type="roll" value="/roll dF" width="30" height="30">
+					<img src="https://cdn.pixabay.com/photo/2017/01/10/23/01/icon-1970474_960_720.png" width="30" height="30"/>
+				</button>						
+			</td>
+
+			<td style="min-width: 60;">
+				<button  type="roll" style="font-size: 20px; text-align: center; width: 30px; height: 30px;" value="/roll [[0+@{d4}]]d4 + [[0+@{d6}]]d6 + [[0+@{d8}]]d8 + [[0+@{d10}]]d10 + [[0+@{d12}]]d12 + [[0+@{d20}]]d20 + [[0+@{d100}]]d100 + [[0+@{dF}]]dF"> </button>
+
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="number" name="attr_d4" id="attr_d4" min="0" max="99" />
+			</td>
+			<td>
+				<input type="number" name="attr_d6" id="attr_d6" min="0" max="99" />
+			</td>
+			<td>
+				<input type="number" name="attr_d8" id="attr_d8" min="0" max="99" />
+			</td>
+			<td>
+				<input type="number" name="attr_d10" id="attr_d10" min="0" max="99" />
+			</td>
+			<td>
+				<input type="number" name="attr_d12" id="attr_d12" min="0" max="99" />
+			</td>
+			<td>
+				<input type="number" name="attr_d20" id="attr_d20" min="0" max="99" />
+			</td>
+			<td>
+				<input type="number" name="attr_d100" id="attr_d100" min="0" max="99" />
+			</td>
+			<td>
+				<input type="number" name="attr_dF" id="attr_dF" min="0" max="99" />
+			</td>
+			<td style="min-width: 60;">
+				<button  style="text-align:center" onclick="getElementById('attr_d4').value=' '; getElementById('attr_d6').value=' '; getElementById('attr_d8').value=' '; getElementById('attr_d10').value=' '; getElementById('attr_d12').value=' '; getElementById('attr_d20').value=' '; getElementById('attr_d100').value=' '; getElementById('attr_dF').value=' '; " style="font-size: 14px; text-align: left; height: 30px; width: 80px">CLEAR</button>
+			</td>
+		</tr>
+	</table>
+</div><!-- Dice Bar close --> 
+
+<!--End of Dice Pool Bar>
+<!-- ********************************************************************************************************************* -->
