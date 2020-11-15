@@ -3,7 +3,7 @@ button[type=roll].sheet-blank-roll-button::before { content: ''; }
 button[type=roll].sheet-blank-roll-button { padding: 5px 8px 2px 0px; }
 
 textarea { 
- max-height: 33px;
+ max-height: 15px;
 }
 
 select {
@@ -11,5 +11,7 @@ select {
 }
 
 label {
- min-size: 200;
+ text-align: right;
+ width: 75px;
+ display:inline-block
 }
