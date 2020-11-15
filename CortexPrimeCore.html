@@ -497,21 +497,30 @@
 	<h3>Signature Assets</h3>
 	<div class="sheet-2colrow">
 		<div class="sheet-col">
-
 			<input type="text" name="attr_SigAsset1" />
 			<select name="attr_SigAsset1_Die" id="attr_SigAsset1_Die" placeholder="d6">
 				<option value="d6">d6</option>
 				<option value="d8">d8</option>
 				<option value="d10">d10</option>
 			</select>
-			<button	type="roll" 
-				class="blank-roll-button" 
-				value="!setattr --silent --name @{character_name} --mod --@{SigAsset1_Die}|1">
-			ADD
+			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --@{SigAsset1_Die}|1">
+				ADD
+			</button>
+		</div>
+		<div class="sheet-col">
+			<input type="text" name="attr_SigAsset1" />
+			<select name="attr_SigAsset1_Die" id="attr_SigAsset1_Die" placeholder="d6">
+				<option value="d6">d6</option>
+				<option value="d8">d8</option>
+				<option value="d10">d10</option>
+			</select>
+			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --@{SigAsset1_Die}|1">
+				ADD
 			</button>
 		</div>
 	</div>
 
-</div><!-- Sheet close --> 
+</div>
+<!-- Sheet close --> 
 <!--End of Sheet>
 <!-- ********************************************************************************************************************* -->
