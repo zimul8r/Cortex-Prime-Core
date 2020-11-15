@@ -70,13 +70,12 @@
 
 		<div class="sheet-col">
 			
-			<label>
-				<h4>Name</h4>
-				<input type="text" name="attr_character_name" />
-			</label> 
+			<h4>Name</h4>
+			<input type="text" name="attr_character_name" />
 			<br />
+
 			<h3>Attributes</h3>
-			<label for="attr_Physical">Physical:
+			<label for="attr_Physical">Physical:</label>
 				<select name="attr_Physical" id="attr_Physical" placeholder="d4">
 					<option value="d4">d4</option>
 					<option value="d6">d6</option>
@@ -89,9 +88,9 @@
 					value="!setattr --silent --name @{character_name} --mod --@{Physical}|1">
 				ADD
 				</button>
-			</label>
+				<br />
 
-			<label for="attr_Mental">Mental:
+			<label for="attr_Mental">Mental:</label>
 				<select name="attr_Mental" id="attr_Mental" placeholder="d4">
 					<option value="d4">d4</option>
 					<option value="d6">d6</option>
@@ -104,9 +103,9 @@
 					value="!setattr --silent --name @{character_name} --mod --@{Mental}|1">
 				ADD
 				</button>
-			</label>
+				<br />
 
-			<label for="attr_Social">Social:
+			<label for="attr_Social">Social:</label>
 				<select name="attr_Social" id="attr_Social" placeholder="d4">
 					<option value="d4">d4</option>
 					<option value="d6">d6</option>
@@ -119,9 +118,7 @@
 					value="!setattr --silent --name @{character_name} --mod --@{Social}|1" >
 				ADD
 				</button>
-
-			</label>
-			<br />
+				<br />
 
 			<h3>Skills</h3>
 			<div class="sheet-2colrow">
@@ -416,13 +413,38 @@
 
 				</div>
 			</div>
+			<h3>Signature Assets</h3>
+			<div class="sheet-2colrow">
+				<div class="sheet-col">
+					<input type="text" name="attr_SigAsset1" />
+					<select name="attr_SigAsset1_Die" id="attr_SigAsset1_Die" placeholder="d6">
+						<option value="d6">d6</option>
+						<option value="d8">d8</option>
+						<option value="d10">d10</option>
+					</select>
+					<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --@{SigAsset1_Die}|1">
+						ADD
+					</button>
+				</div>
+				<div class="sheet-col">
+					<input type="text" name="attr_SigAsset2" />
+					<select name="attr_SigAsset2_Die" id="attr_SigAsset2_Die" placeholder="d6">
+						<option value="d6">d6</option>
+						<option value="d8">d8</option>
+						<option value="d10">d10</option>
+					</select>
+					<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --@{SigAsset2_Die}|1">
+						ADD
+					</button>
+				</div>
+			</div>
 		</div>
 
 		<div class="sheet-col">
-			<label>
-				<h4>Description</h4>
-				<textarea name="attr_Description"></textarea>
-			</label>
+			<h4>Description</h4>
+			<textarea name="attr_Description"></textarea>
+			<br />
+
 			<h3>Distinctions</h3>
 			<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024223__340.png" alt="d8" width="32" height="32" border="0" align="middle" />
 			<input type="text" name="attr_Distinction1" />
@@ -496,33 +518,6 @@
 			<textarea name="attr_Distinction3_SFX3"></textarea><br />
 		</div>
 	</div>
-
-	<h3>Signature Assets</h3>
-	<div class="sheet-2colrow">
-		<div class="sheet-col">
-			<input type="text" name="attr_SigAsset1" />
-			<select name="attr_SigAsset1_Die" id="attr_SigAsset1_Die" placeholder="d6">
-				<option value="d6">d6</option>
-				<option value="d8">d8</option>
-				<option value="d10">d10</option>
-			</select>
-			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --@{SigAsset1_Die}|1">
-				ADD
-			</button>
-		</div>
-		<div class="sheet-col">
-			<input type="text" name="attr_SigAsset2" />
-			<select name="attr_SigAsset2_Die" id="attr_SigAsset2_Die" placeholder="d6">
-				<option value="d6">d6</option>
-				<option value="d8">d8</option>
-				<option value="d10">d10</option>
-			</select>
-			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --@{SigAsset2_Die}|1">
-				ADD
-			</button>
-		</div>
-	</div>
-
 </div>
 <!-- Sheet close --> 
 <!--End of Sheet>
