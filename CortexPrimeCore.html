@@ -88,7 +88,6 @@
 					value="!setattr --silent --name @{character_name} --mod --@{Physical}|1">
 				ADD
 				</button>
-				<br />
 
 			<label for="attr_Mental">Mental:</label>
 				<select name="attr_Mental" id="attr_Mental" placeholder="d4">
@@ -103,7 +102,6 @@
 					value="!setattr --silent --name @{character_name} --mod --@{Mental}|1">
 				ADD
 				</button>
-				<br />
 
 			<label for="attr_Social">Social:</label>
 				<select name="attr_Social" id="attr_Social" placeholder="d4">
@@ -438,6 +436,7 @@
 				<option value="Trick">Trick</option>
 			</select>
 			<input type="text" name="attr_Specialty1" />
+			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1">ADD d6</button>
 			<br />
 
 			<select  class="sheet-select-wide" name="attr_Specialty2_Skill" id="attr_Specialty2_Skill">
@@ -463,6 +462,7 @@
 				<option value="Trick">Trick</option>
 			</select>
 			<input type="text" name="attr_Specialty2" />
+			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1">ADD d6</button>
 			<br />
 
 			<select  class="sheet-select-wide" name="attr_Specialty3_Skill" id="attr_Specialty3_Skill">
@@ -488,6 +488,7 @@
 				<option value="Trick">Trick</option>
 			</select>
 			<input type="text" name="attr_Specialty3" />
+			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1">ADD d6</button>
 			<br />
 			
 			<select  class="sheet-select-wide" name="attr_Specialty4_Skill" id="attr_Specialty4_Skill">
@@ -513,6 +514,7 @@
 				<option value="Trick">Trick</option>
 			</select>
 			<input type="text" name="attr_Specialty4" />
+			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1">ADD d6</button>
 			<br />
 			
 			<select  class="sheet-select-wide" name="attr_Specialty5_Skill" id="attr_Specialty5_Skill">
@@ -538,7 +540,29 @@
 				<option value="Trick">Trick</option>
 			</select>
 			<input type="text" name="attr_Specialty5" />
+			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1">ADD d6</button>
 			<br />
+			
+            <h3>Signature Assets</h3>
+        	<input type="text" name="attr_SigAsset1" />
+        	<select name="attr_SigAsset1_Die" id="attr_SigAsset1_Die" placeholder="d6">
+        		<option value="d6">d6</option>
+        		<option value="d8">d8</option>
+        		<option value="d10">d10</option>
+        	</select>
+        	<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --@{SigAsset1_Die}|1">
+        		ADD
+        	</button>
+        	<br />
+        	<input type="text" name="attr_SigAsset2" />
+        	<select name="attr_SigAsset2_Die" id="attr_SigAsset2_Die" placeholder="d6">
+        		<option value="d6">d6</option>
+        		<option value="d8">d8</option>
+        		<option value="d10">d10</option>
+        	</select>
+        	<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --@{SigAsset2_Die}|1">
+        		ADD
+        	</button>
 		</div>
 		
 		<div class="sheet-col">
@@ -577,31 +601,6 @@
 			<textarea name="attr_Distinction3_SFX3"></textarea><br />
 		</div>
 	</div>
-    <h3>Signature Assets</h3>
-    <div class="sheet-2colrow">
-    	<div class="sheet-col">
-    		<input type="text" name="attr_SigAsset1" />
-    		<select name="attr_SigAsset1_Die" id="attr_SigAsset1_Die" placeholder="d6">
-    			<option value="d6">d6</option>
-    			<option value="d8">d8</option>
-    			<option value="d10">d10</option>
-    		</select>
-    		<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --@{SigAsset1_Die}|1">
-    			ADD
-    		</button>
-    	</div>
-    	<div class="sheet-col">
-    		<input type="text" name="attr_SigAsset2" />
-    		<select name="attr_SigAsset2_Die" id="attr_SigAsset2_Die" placeholder="d6">
-    			<option value="d6">d6</option>
-    			<option value="d8">d8</option>
-    			<option value="d10">d10</option>
-    		</select>
-    		<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --@{SigAsset2_Die}|1">
-    			ADD
-    		</button>
-    	</div>
-    </div>
 </div>
 <!-- Sheet close --> 
 <!--End of Sheet>
