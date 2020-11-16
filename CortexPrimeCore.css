@@ -10,6 +10,10 @@ select {
  width: 60px;
 }
 
+select.sheet-select-wide {
+ width: 120px;
+}
+
 label {
  text-align: right;
  width: 75px;
