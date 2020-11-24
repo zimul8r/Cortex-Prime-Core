@@ -34,7 +34,7 @@
 			<td style="min-width: 60;">
 				<button	type="roll" 
 					style="font-size: 20px; text-align: center; width: 30px; height: 30px;" 
-					value="/roll [[0+@{d4}]]d4 + [[0+@{d6}]]d6 + [[0+@{d8}]]d8 + [[0+@{d10}]]d10 + [[0+@{d12}]]d12"> </button>
+					value="/roll {[[0+@{d4}]]d4 + [[0+@{d6}]]d6 + [[0+@{d8}]]d8 + [[0+@{d10}]]d10 + [[0+@{d12}]]d12}k2"> </button>
 			</td>
 		</tr>
 		<tr>
@@ -56,20 +56,22 @@
 			<td>
 				<button	type="roll" 
 					class="blank-roll-button" 
-					value="!setattr --silent --name @{character_name} --d4|'' --d6|'' --d8|'' --d10|'' --d12|''" style="
+					value="!setattr --silent --name @{character_name} --d4|'' --d6|'' --d8|'' --d10|'' --d12|'' --PoolTracker|''" style="
 					height:30px;">
 				CLEAR
 				</button>
 			</td>
 		</tr>
 	</table>
-	<hr>
 </div><!-- Dice Bar close --> 
+
+<label for="attr_PoolTracker">Added:</label>
+<textarea rows="1" name="attr_PoolTracker"></textarea>
+<hr>
+
 <div class='sheet-prime-core'>
 	<div class="sheet-2colrow">
-
 		<div class="sheet-col">
-			
 			<h3>Name</h3>
 			<input type="text" name="attr_character_name" />
 			<br />
@@ -86,7 +88,7 @@
     				</select>
     				<button	type="roll" 
     					class="blank-roll-button" 
-    					value="!setattr --silent --name @{character_name} --mod --@{Physical}|1">
+    					value="!setattr --silent --name @{character_name} --mod --@{Physical}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Physical">
     				ADD
     				</button>
     
@@ -100,7 +102,7 @@
     				</select>
     				<button	type="roll" 
     					class="blank-roll-button" 
-    					value="!setattr --silent --name @{character_name} --mod --@{Mental}|1">
+    					value="!setattr --silent --name @{character_name} --mod --@{Mental}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Mental">
     				ADD
     				</button>
     
@@ -114,7 +116,7 @@
     				</select>
     				<button	type="roll" 
     					class="blank-roll-button" 
-    					value="!setattr --silent --name @{character_name} --mod --@{Social}|1" >
+    					value="!setattr --silent --name @{character_name} --mod --@{Social}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Social" >
     				ADD
     				</button>
     				<br />
@@ -133,7 +135,7 @@
     					</select>
     					<button	type="roll" 
     						class="blank-roll-button" 
-    						value="!setattr --silent --name @{character_name} --mod --@{Craft}|1">
+    						value="!setattr --silent --name @{character_name} --mod --@{Craft}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Craft">
     					ADD
     					</button>
     					<br />
@@ -148,7 +150,7 @@
     					</select>
     					<button	type="roll" 
     						class="blank-roll-button" 
-    						value="!setattr --silent --name @{character_name} --mod --@{Drive}|1">
+    						value="!setattr --silent --name @{character_name} --mod --@{Drive}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Drive">
     					ADD
     					</button>
     					<br />
@@ -163,7 +165,7 @@
     					</select>
     					<button	type="roll" 
     						class="blank-roll-button" 
-    						value="!setattr --silent --name @{character_name} --mod --@{Fight}|1">
+    						value="!setattr --silent --name @{character_name} --mod --@{Fight}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Fight">
     					ADD
     					</button>
     					<br />
@@ -178,7 +180,7 @@
     					</select>
     					<button	type="roll" 
     						class="blank-roll-button" 
-    						value="!setattr --silent --name @{character_name} --mod --@{Fix}|1">
+    						value="!setattr --silent --name @{character_name} --mod --@{Fix}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Fix">
     					ADD
     					</button>
     					<br />
@@ -193,7 +195,7 @@
     					</select>
     					<button	type="roll" 
     						class="blank-roll-button" 
-    						value="!setattr --silent --name @{character_name} --mod --@{Fly}|1">
+    						value="!setattr --silent --name @{character_name} --mod --@{Fly}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Fly">
     					ADD
     					</button>
     					<br />
@@ -208,7 +210,7 @@
     					</select>
     					<button	type="roll" 
     						class="blank-roll-button" 
-    						value="!setattr --silent --name @{character_name} --mod --@{Focus}|1">
+    						value="!setattr --silent --name @{character_name} --mod --@{Focus}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Focus">
     					ADD
     					</button>
     					<br />
@@ -223,7 +225,7 @@
     					</select>
     					<button	type="roll" 
     						class="blank-roll-button" 
-    						value="!setattr --silent --name @{character_name} --mod --@{Influence}|1">
+    						value="!setattr --silent --name @{character_name} --mod --@{Influence}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Influence">
     					ADD
     					</button>
     					<br />
@@ -238,7 +240,7 @@
     					</select>
     					<button	type="roll" 
     						class="blank-roll-button" 
-    						value="!setattr --silent --name @{character_name} --mod --@{Know}|1">
+    						value="!setattr --silent --name @{character_name} --mod --@{Know}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Know">
     					ADD
     					</button>
     					<br />
@@ -253,7 +255,7 @@
     					</select>
     					<button	type="roll" 
     						class="blank-roll-button" 
-    						value="!setattr --silent --name @{character_name} --mod --@{Labor}|1">
+    						value="!setattr --silent --name @{character_name} --mod --@{Labor}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Labor">
     					ADD
     					</button>
     
@@ -271,7 +273,7 @@
     					</select>
     					<button	type="roll" 
     						class="blank-roll-button" 
-    						value="!setattr --silent --name @{character_name} --mod --@{Move}|1">
+    						value="!setattr --silent --name @{character_name} --mod --@{Move}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Move">
     					ADD
     					</button>
     					<br />
@@ -286,7 +288,7 @@
     					</select>
     					<button	type="roll" 
     						class="blank-roll-button" 
-    						value="!setattr --silent --name @{character_name} --mod --@{Notice}|1">
+    						value="!setattr --silent --name @{character_name} --mod --@{Notice}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Notice">
     					ADD
     					</button>
     					<br />
@@ -301,7 +303,7 @@
     					</select>
     					<button	type="roll" 
     						class="blank-roll-button" 
-    						value="!setattr --silent --name @{character_name} --mod --@{Operate}|1">
+    						value="!setattr --silent --name @{character_name} --mod --@{Operate}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Operate">
     					ADD
     					</button>
     					<br />
@@ -316,7 +318,7 @@
     					</select>
     					<button	type="roll" 
     						class="blank-roll-button" 
-    						value="!setattr --silent --name @{character_name} --mod --@{Perform}|1">
+    						value="!setattr --silent --name @{character_name} --mod --@{Perform}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Perform">
     					ADD
     					</button>
     					<br />
@@ -331,7 +333,7 @@
     					</select>
     					<button	type="roll" 
     						class="blank-roll-button" 
-    						value="!setattr --silent --name @{character_name} --mod --@{Shoot}|1">
+    						value="!setattr --silent --name @{character_name} --mod --@{Shoot}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Shoot">
     					ADD
     					</button>
     					<br />
@@ -346,7 +348,7 @@
     					</select>
     					<button	type="roll" 
     						class="blank-roll-button" 
-    						value="!setattr --silent --name @{character_name} --mod --@{Sneak}|1">
+    						value="!setattr --silent --name @{character_name} --mod --@{Sneak}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Sneak">
     					ADD
     					</button>
     					<br />
@@ -361,7 +363,7 @@
     					</select>
     					<button	type="roll" 
     						class="blank-roll-button" 
-    						value="!setattr --silent --name @{character_name} --mod --@{Survive}|1">
+    						value="!setattr --silent --name @{character_name} --mod --@{Survive}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Survive">
     					ADD
     					</button>
     					<br />
@@ -376,7 +378,7 @@
     					</select>
     					<button	type="roll" 
     						class="blank-roll-button" 
-    						value="!setattr --silent --name @{character_name} --mod --@{Throw}|1">
+    						value="!setattr --silent --name @{character_name} --mod --@{Throw}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Throw">
     					ADD
     					</button>					
     					<br />
@@ -391,7 +393,7 @@
     					</select>
     					<button	type="roll" 
     						class="blank-roll-button" 
-    						value="!setattr --silent --name @{character_name} --mod --@{Treat}|1">
+    						value="!setattr --silent --name @{character_name} --mod --@{Treat}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Treat">
     					ADD
     					</button>
     					<br />
@@ -407,7 +409,7 @@
     					</select>
     					<button	type="roll" 
     						class="blank-roll-button" 
-    						value="!setattr --silent --name @{character_name} --mod --@{Trick}|1">
+    						value="!setattr --silent --name @{character_name} --mod --@{Trick}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Trick">
     					ADD
     					</button>
     
@@ -440,7 +442,7 @@
     				<option value="Trick">Trick</option>
     			</select>
     			<input type="text" name="attr_Specialty1" />
-    			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1">ADD d6</button>
+    			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+@{Specialty1}">ADD d6</button>
     			<br />
     
     			<select  class="sheet-select-wide" name="attr_Specialty2_Skill" id="attr_Specialty2_Skill">
@@ -466,7 +468,7 @@
     				<option value="Trick">Trick</option>
     			</select>
     			<input type="text" name="attr_Specialty2" />
-    			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1">ADD d6</button>
+    			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+@{Specialty2}">ADD d6</button>
     			<br />
     
     			<select  class="sheet-select-wide" name="attr_Specialty3_Skill" id="attr_Specialty3_Skill">
@@ -492,7 +494,7 @@
     				<option value="Trick">Trick</option>
     			</select>
     			<input type="text" name="attr_Specialty3" />
-    			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1">ADD d6</button>
+    			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+@{Specialty3}">ADD d6</button>
     			<br />
     			
     			<select  class="sheet-select-wide" name="attr_Specialty4_Skill" id="attr_Specialty4_Skill">
@@ -518,7 +520,7 @@
     				<option value="Trick">Trick</option>
     			</select>
     			<input type="text" name="attr_Specialty4" />
-    			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1">ADD d6</button>
+    			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+@{Specialty4}">ADD d6</button>
     			<br />
     			
     			<select  class="sheet-select-wide" name="attr_Specialty5_Skill" id="attr_Specialty5_Skill">
@@ -544,7 +546,7 @@
     				<option value="Trick">Trick</option>
     			</select>
     			<input type="text" name="attr_Specialty5" />
-    			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1">ADD d6</button>
+    			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+@{Specialty5}">ADD d6</button>
     			<br />
             </div>
             
@@ -556,7 +558,7 @@
             		<option value="d8">d8</option>
             		<option value="d10">d10</option>
             	</select>
-            	<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --@{SigAsset1_Die}|1">
+            	<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --@{SigAsset1_Die}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+@{SigAsset1}">
             		ADD
             	</button>
             	<br />
@@ -566,7 +568,7 @@
             		<option value="d8">d8</option>
             		<option value="d10">d10</option>
             	</select>
-            	<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --@{SigAsset2_Die}|1">
+            	<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --@{SigAsset2_Die}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+@{SigAsset2}">
             		ADD
             	</button>
     		</div>
@@ -580,8 +582,8 @@
             <div style="border: 1px outset black;  background-color: silver;">
     			<h3>Distinction</h3>
     			<input type="text" name="attr_Distinction1" />
-    			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d8|1">ADD d8</button>
-    			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d4|1">ADD d4</button>
+    			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d8|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+@{Distinction1}">ADD d8</button>
+    			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d4|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+@{Distinction1}">ADD d4</button>
     			<br />
     	    	Highlight Skills:<input type="text" name="attr_Distinction1_Highlights" />
     	    	<br />
@@ -599,8 +601,8 @@
             <div style="border: 1px outset black;  background-color: violet;">
     			<h3>Distinction</h3>
     			<input type="text" name="attr_Distinction2" />
-    			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d8|1">ADD d8</button>
-    			<button type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d4|1">ADD d4</button>
+    			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d8|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+@{Distinction2}">ADD d8</button>
+    			<button type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d4|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+@{Distinction2}">ADD d4</button>
     			<br />
     		    	Highlight Skills:<input type="text" name="attr_Distinction2_Highlights" />
     			<br />
@@ -618,8 +620,8 @@
             <div style="border: 1px outset black;  background-color: RosyBrown;">
     			<h3>Distinction</h3>
     			<input type="text" name="attr_Distinction3" />
-    			<button type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d8|1">ADD d8</button>
-    			<button type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d4|1">ADD d4</button>
+    			<button type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d8|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+@{Distinction3}">ADD d8</button>
+    			<button type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d4|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+@{Distinction3}">ADD d4</button>
     			<br />
     		    	Highlight Skills:<input type="text" name="attr_Distinction3_Highlights" />
     			<br />
