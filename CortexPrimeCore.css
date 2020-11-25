@@ -30,3 +30,22 @@ label {
  width: 75px;
  display:inline-block;
 }
+
+input.sheet-toggle-show:not(:checked) ~ div.sheet-body,
+input.sheet-toggle-hide:checked ~ div.sheet-body {
+    display: none;
+}
+
+/*Configure the tab buttons*/
+.sheet-character,
+.sheet-npc,
+.sheet-dice-only {
+	display: none;
+}
+
+/* show the selected tab */
+.sheet-tabstoggle[value="character"] ~ div.sheet-character,
+.sheet-tabstoggle[value="npc"] ~ div.sheet-npc,
+.sheet-tabstoggle[value="dice-only"] ~ div.sheet-dice-only {
+	display: block;
+}
